@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('56f8fb81d3e14d53b1109d2b7191d914');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '김동규 ♥ 권영신 결혼식에 초대합니다.',
+        description: '2022년 10월 09일 일 pm 05시 트라디노이',
+        imageUrl:
+          'https://postfiles.pstatic.net/MjAyMjA4MTFfMTU1/MDAxNjYwMTUyMjUwMjc4.61Q8wVP5aNitLSmYeHTUNKpKj7PSZy2P9_wxXLPQzWQg.DAjjwDNrr0uFDjfLKEm05dLt-L269umTK2LjHgJwn2wg.JPEG.gyurallu/%EB%AC%B4%EC%A0%9C-1_%EB%8C%80%EC%A7%80_1.jpg?type=w773',
+        link: {
+          mobileWebUrl: 'https://gyus.quv.kr/',
+          webUrl: 'https://gyus.quv.kr/',
+        },
+      },
+      social: {
+        likeCount: 99999, //99999가 최대입니다
+        commentCount: 99999, //99999가 최대입니다
+        sharedCount: 99999, //99999가 최대입니다
+      },
+      buttons: [
+        {
+          title: '지금 바로 접속하기',
+          link: {
+            mobileWebUrl: 'https://gyus.quv.kr/',
+            webUrl: 'https://gyus.quv.kr/',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
